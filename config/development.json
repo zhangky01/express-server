@@ -1,0 +1,7 @@
+{
+    "app": {
+        "name": "express-server",
+        "port": 8080,
+        "env": "dev"
+    }
+}

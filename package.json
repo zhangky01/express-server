@@ -1,0 +1,27 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "description": "base for dev",
+  "main": "bin/www",
+  "scripts": {
+    "init": "node ./init.js",
+    "server": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "config": "3.3.6",
+    "cookie-parser": "~1.4.5",
+    "express": "~4.16.1",
+    "log4js": "6.3.0",
+    "simple-client": "^1.0.2"
+  },
+  "keywords": [
+    "express",
+    "compress",
+    "middleware",
+    "api",
+    "gzip"
+  ],
+  "author": "KaiYang Zhang",
+  "license": "MIT"
+}
