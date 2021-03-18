@@ -62,5 +62,17 @@ npm run server
 curl localhost:你的端口/health # response {"code":0,"msg":"ok","data":null}
 ```
 
+## docker 镜像构建
+```bash
+# 需要在项目根目录
+docker build -t url:版本号 .
+# 查看构建过的镜像
+docker images
+# 运行构建的镜像
+docker run -d -p 访问端口:项目端口 镜像
+# curl
+curl localhost:你的端口/health # response {"code":0,"msg":"ok","data":null}
+```
+
 ## 尾言
 如果对您有帮助，请给个star。^_^
