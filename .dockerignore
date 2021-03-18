@@ -1,0 +1,5 @@
+# output directories
+logs
+
+# Dependency directories
+node_modules
