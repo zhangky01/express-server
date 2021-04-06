@@ -6,7 +6,9 @@
   "scripts": {
     "init": "node ./init.js",
     "server": "node ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -t 10000 --recursive tests/",
+    "coverage": "nyc --reporter=lcov --reporter=text-summary _mocha --no-timeouts --recursive tests/ --reporter mochawesome",
+    "open-report": "open ./mochawesome-report/mochawesome.html && open ./coverage/lcov-report/index.html"
   },
   "dependencies": {
     "config": "3.3.6",
@@ -23,5 +25,12 @@
     "gzip"
   ],
   "author": "KaiYang Zhang",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "nyc": "^15.1.0",
+    "supertest": "^6.1.3"
+  }
 }

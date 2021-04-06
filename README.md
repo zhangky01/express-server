@@ -74,5 +74,14 @@ docker run -d -p 访问端口:项目端口 镜像
 curl localhost:你的端口/health # response {"code":0,"msg":"ok","data":null}
 ```
 
+## 测试报告
+```bash
+npm run coverage
+```
+### 单测
+![avatar](./tests/report/unit_test.jpg)
+### 代码覆盖率
+![avatar](./tests/report/coverage.jpg)
+
 ## 尾言
 如果对您有帮助，请给个star。^_^

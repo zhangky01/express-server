@@ -15,6 +15,9 @@ RUN npm install
 
 COPY . .
 
+# 增加构建前测试
+RUN npm run test
+
 EXPOSE 8080
 
 CMD ["npm", "run", "server"]
