@@ -76,7 +76,10 @@ curl localhost:你的端口/health # response {"code":0,"msg":"ok","data":null}
 
 ## 测试报告
 ```bash
+# 生成测试报告
 npm run coverage
+# 打开测试报告
+npm run open-report
 ```
 ### 单测
 ![avatar](./tests/report/unit_test.jpg)
