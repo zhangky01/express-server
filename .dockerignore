@@ -3,3 +3,6 @@ logs
 
 # Dependency directories
 node_modules
+
+# apidoc
+apidoc

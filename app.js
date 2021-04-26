@@ -5,8 +5,13 @@ const router = require('./routes');
 const cors = require('./middleware/cors');
 const app = express();
 const logger = require('./lib/logger');
+const config = require('config');
+const path = require('path');
 const FULL_LOG = process.env.FULL_LOG === 'on';
-
+const env = config.get('app.env');
+if (env === 'dev' || env === 'test') {
+    app.use(express.static(path.resolve(__dirname, './apidoc')));
+}
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

@@ -15,8 +15,14 @@ RUN npm install
 
 COPY . .
 
+# 生成API文档
+RUN npm run apidoc
+
 # 增加构建前测试
 RUN npm run test
+
+# docker logs 展示容器内日志文件
+RUN ln -sf /dev/stdout ./logs/seal-generator.log
 
 EXPOSE 8080
 

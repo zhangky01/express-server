@@ -8,7 +8,9 @@
     "server": "node ./bin/www",
     "test": "mocha -t 10000 --recursive tests/",
     "coverage": "nyc --reporter=lcov --reporter=text-summary _mocha --no-timeouts --recursive tests/ --reporter mochawesome",
-    "open-report": "open ./mochawesome-report/mochawesome.html && open ./coverage/lcov-report/index.html"
+    "open-report": "open ./mochawesome-report/mochawesome.html && open ./coverage/lcov-report/index.html",
+    "apidoc": "apidoc -f .js -i ./routes/ -o ./apidoc/",
+    "open-api": "open ./apidoc/index.html"
   },
   "dependencies": {
     "config": "3.3.6",
@@ -27,10 +29,18 @@
   "author": "KaiYang Zhang",
   "license": "MIT",
   "devDependencies": {
+    "apidoc": "^0.27.1",
     "chai": "^4.3.4",
     "mocha": "^8.3.2",
     "mochawesome": "^6.2.2",
     "nyc": "^15.1.0",
     "supertest": "^6.1.3"
+  },
+  "apidoc": {
+    "title": "express-server",
+    "name": "express-server apis",
+    "description": "样例服务api",
+    "url" : "/v1",
+    "sampleUrl": "/v1"
   }
 }
