@@ -86,5 +86,17 @@ npm run open-report
 ### 代码覆盖率
 ![avatar](./tests/report/coverage.jpg)
 
+## 生成api文档
+```bash
+# 生成api文档
+npm run apidoc
+# 打开api文档
+npm run open-api
+```
+
+### api文档
+![image](./apidoc/example1.png)
+![image](./apidoc/example2.png)
+
 ## 尾言
 如果对您有帮助，请给个star。^_^
