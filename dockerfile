@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 COPY package.json .
 
 # 设置淘宝源
-RUN npm set registry https://registry.npm.taobao.org
+RUN npm config set registry https://registry.npm.taobao.org
 
 RUN npm install
 
